@@ -1,0 +1,12 @@
+div.rpsTitle {
+	text-align: center;
+}
+
+div.userSelections {
+	text-align: center;
+}
+
+div.gameResults {
+	text-align: center;
+	padding-top: 15px;
+}
