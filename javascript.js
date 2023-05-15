@@ -3,7 +3,7 @@ let computerSelection = ''
 
 //Computer chooses rock, paper or scissors
 function computerPlay() {
-	let options = ["Rock", "Paper", "Scissors"];
+	let options = ["steen", "papier", "schaar"];
 	let selection = options[Math.floor(Math.random() * options.length)];
 	console.log("The computer selected " + selection);
 	computerSelection = selection;
@@ -12,38 +12,38 @@ function computerPlay() {
 //Game rounds
 //Player chooses rock
 function playRound(playerSelection, computerSelection) {
-	if (playerSelection.toLowerCase() == "rock") {
-		if (computerSelection.toLowerCase() == "rock") {
+	if (playerSelection.toLowerCase() == "steen") {
+		if (computerSelection.toLowerCase() == "steen") {
 			return "It's a tie.";
 		}
-		else if (computerSelection.toLowerCase() == "paper") {
+		else if (computerSelection.toLowerCase() == "papier") {
 			return "You lose, paper beats rock.";
 		}
-		else if (computerSelection.toLowerCase() == "scissors") {
+		else if (computerSelection.toLowerCase() == "schaar") {
 			return "You win! Rock beats scissors.";
 		}
 	}
 //Player chooses paper	
-	else if (playerSelection.toLowerCase() == "paper") {
-		if (computerSelection.toLowerCase() == "paper") {
+	else if (playerSelection.toLowerCase() == "papier") {
+		if (computerSelection.toLowerCase() == "papier") {
 			return "It's a tie.";
 		}
-		else if (computerSelection.toLowerCase() == "scissors") {
+		else if (computerSelection.toLowerCase() == "schaar") {
 			return "You lose, scissors beats paper";
 		}
-		else if (computerSelection.toLowerCase() == "rock") {
+		else if (computerSelection.toLowerCase() == "steen") {
 			return "You win! paper beats rock.";
 		}
 	}
 //Player chooses scissors	
-	else if (playerSelection.toLowerCase() == "scissors") {
-		if (computerSelection.toLowerCase() == "scissors") {
+	else if (playerSelection.toLowerCase() == "schaar") {
+		if (computerSelection.toLowerCase() == "schaar") {
 			return "It's a tie.";
 		}
-		else if (computerSelection.toLowerCase() == "rock") {
+		else if (computerSelection.toLowerCase() == "steen") {
 			return "You lose, rock beats scissors.";
 		}
-		else if (computerSelection.toLowerCase() == "paper") {
+		else if (computerSelection.toLowerCase() == "papier") {
 			return "You win! scissors beats paper.";
 		}
 	}
@@ -87,15 +87,15 @@ displayOutcome.appendChild(outcomeText);
 
 const rockButton = document.querySelector('#rockButton');
 rockButton.addEventListener('click', () => {
-	updateScore('rock');
+	updateScore('steen');
 });
 
 const paperButton = document.querySelector('#paperButton');
 paperButton.addEventListener('click', () => {
-	updateScore('paper');
+	updateScore('papier');
 });
 
 const scissorsButton = document.querySelector('#scissorsButton');
 scissorsButton.addEventListener('click', () => {
-	updateScore('scissors');
+	updateScore('schaar');
 });
